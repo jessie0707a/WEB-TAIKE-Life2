@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diving Spot</title>
+    <link rel="stylesheet" href="./css/divingspotRe2.css">
+    <link rel="stylesheet" href="./css/nav.css">       
+    <!-- 引入 Google Fonts -->
+
+</head>
+<body>
+	<!-- 導航欄容器 -->
+	<div id="navigation-container"></div>
+		    
+    <div class="container">
+        <!-- Title -->
+        <h1 class="title">Popular Diving Areas</h1>
+        
+        <!-- Top diving spots carousel -->
+        <div class="carousel-container">
+            <!-- Left Arrow -->
+            <button class="nav-button nav-button-left" aria-label="Scroll left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <!-- Right Arrow -->
+            <button class="nav-button nav-button-right" aria-label="Scroll right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+
+            <!-- Cards Container -->
+            <div class="cards-container" id="cardsContainer">
+                <div class="card">
+                    <img src="images/divingspot/east.jpg" alt="Northeast Corner">
+                    <div class="card-content">
+                        <h3>Northeast Corner</h3>
+                        <p>邦勞島南方阿羅娜潛點</p>
+                        <p>乘坐坐船至潛點，再浮或穿步入水</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/divingspot/kenting.png" alt="Kenting">
+                    <div class="card-content">
+                        <h3>Kenting</h3>
+                        <p>邦勞島西面潛點-PunTod, Doljo</p>
+                        <p>乘坐坐船至潛點，再浮或穿步入水</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/divingspot/liq.jpg" alt="Xiao Liuqiu">
+                    <div class="card-content">
+                        <h3>Xiao Liuqiu</h3>
+                        <p>邦勞島西北面MOMO沙灘</p>
+                        <p>乘坐坐船至潛點，沙岸步行入水</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/divingspot/green.jpg" alt="Green Island">
+                    <div class="card-content">
+                        <h3>Green Island</h3>
+                        <p>邦勞島北面NAPALING</p>
+                        <p>乘坐坐船至潛點，岩岸步行入水</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/divingspot/lanyu.jpg" alt="Lanyu">
+                    <div class="card-content">
+                        <h3>Lanyu</h3>
+                        <p>邦勞島北面NAPALING</p>
+                        <p>乘坐坐船至潛點，岩岸步行入水</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/divingspot/penghu.jpg" alt="Penghu">
+                    <div class="card-content">
+                        <h3>Penghu</h3>
+                        <p>邦勞島北面NAPALING</p>
+                        <p>乘坐坐船至潛點，岩岸步行入水</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Find diving spots section -->
+        <h2 class="subtitle">Find Diving Spots</h2>
+        
+        <div class="spots-container">
+            <!-- Map Section -->
+            <div class="map-container">
+                <img src="images/divingspot/map.jpg" alt="Taiwan diving spots map" class="map-image">
+            </div>
+            <div id="mapModal" class="modal">
+			    <span class="close">&times;</span>
+			    <img id="modalImage" class="modal-content">
+			</div>
+
+            <!-- Spots Grid -->
+            <div class="spots-grid">
+                <a href="./dive-blog-north2.html" class="spot-link">Northeast corner</a>
+                <a href="/locations/kenting.html" class="spot-link">Kenting</a>
+                <a href="/locations/xiao-liuqiu.html" class="spot-link">Xiao Liuqiu</a>
+                <a href="/locations/green-island.html" class="spot-link">Green Island</a>
+                <a href="/locations/lanyu.html" class="spot-link">Lanyu</a>
+                <a href="/locations/penghu.html" class="spot-link">Penghu</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/divingspotRe.js"></script>
+
+	<!-- 然後添加另一個 script 標籤來處理導航初始化 -->
+	<script type="module">
+    	import { initNavigation } from './js/components/navigation4.js';
+    
+    	// 確保頁面載入時執行檢查
+    	document.addEventListener('DOMContentLoaded', async () => {
+        	console.log('頁面載入，開始初始化...');
+        	await initNavigation();
+    	});
+	</script>
+</body>
+</html>

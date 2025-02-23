@@ -1,0 +1,146 @@
+/* 全局樣式設置 */
+:root {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+:root {
+    --nav-height: 200px; /* 調整為實際導航欄高度 */
+}
+
+body {
+    padding: 0;
+    background-color: #ffffff;
+    margin-top: var(--nav-height); /* 使用變數設置上邊距 */
+}
+
+/* 卡片容器 */
+.cards-container {
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* 卡片樣式 */
+.diving-card {
+    display: flex;
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box; /* 確保 padding 不會影響總寬度 */
+}
+
+/* 資訊區域 */
+.diving-info {
+    flex: 1;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+/* 標題 */
+.diving-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* 位置和潛水方式 */
+.diving-location, 
+.diving-way {
+    margin-bottom: 0.5rem;
+}
+
+.label {
+    font-weight: 600;
+}
+
+/* 內容描述 */
+.diving-content {
+    color: #4b5563;
+    margin-top: 1rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+/* 圖片容器 */
+.diving-image-container {
+    position: relative;
+    width: 24rem;
+    min-width: 24rem;
+    box-sizing: border-box;
+}
+
+.diving-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 讚按鈕 */
+.like-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    box-sizing: border-box;
+}
+
+.like-button:hover {
+    transform: scale(1.1);
+}
+
+.heart-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.2s;
+}
+
+.like-button.active .heart-icon {
+    fill: #ef4444;
+    stroke: #ef4444;
+}
+
+/* 載入中和錯誤狀態 */
+.loading-indicator {
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+}
+
+.error-message {
+    color: #ef4444;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .diving-card {
+        flex-direction: column;
+    }
+
+    .diving-image-container {
+        width: 100%;
+        height: 20rem;
+        min-width: unset;
+    }
+}

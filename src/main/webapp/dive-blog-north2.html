@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAIKE-Northeast Corner</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/dive-blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/diving-card.css">
+    <link rel="stylesheet" href="./css/nav.css">    
+</head>
+<body>
+	<!-- 導航欄容器 -->
+	<div id="navigation-container"></div>
+
+
+    <main class="container main-content">
+        <h2 class="main-title">Northeast Corner 東北角  : Taiwan's Premier Diving Destination</h2>
+        <p class="description">Discover the captivating underwater realm of Taiwan's Northeast Corner, where the dynamic Pacific Ocean meets dramatic coastal cliffs, creating a diverse ecosystem of marine life and unique underwater topography. From the sheltered bays of Longdong to the thriving marine reserves of Chaojing, this region offers some of Taiwan's most accessible and rewarding dive experiences.</p>
+
+        <h3 class="section-title">Best Time to Visit</h3>
+        <p class="description">The prime diving season extends from May to September, with water temperatures ranging from 24-28°C and visibility reaching 5-15 meters. Protected sites like Longdong Bay offer year-round diving, though winter months may experience stronger northeast monsoon winds.</p>
+
+        <h3 class="section-title">Popular Dive Sites</h3>
+
+    <!-- 卡片容器 -->
+    <div class="cards-container">
+        <!-- 第一張卡片 -->
+        <div class="diving-card" id="divingCard1">
+            <div class="diving-info">
+                <h2 class="diving-title"></h2>
+                <div class="diving-location">
+                    <span class="label">Location: </span>
+                    <span class="value"></span>
+                </div>
+                <div class="diving-way">
+                    <span class="label">Diving Way: </span>
+                    <span class="value"></span>
+                </div>
+                <p class="diving-content"></p>
+            </div>
+            <div class="diving-image-container">
+                <img class="diving-image" alt="潛水點照片">
+                <button class="like-button" data-card-id="1">
+                    <svg class="heart-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- 第二張卡片 -->
+        <div class="diving-card" id="divingCard2">
+            <div class="diving-info">
+                <h2 class="diving-title"></h2>
+                <div class="diving-location">
+                    <span class="label">Location: </span>
+                    <span class="value"></span>
+                </div>
+                <div class="diving-way">
+                    <span class="label">Diving Way: </span>
+                    <span class="value"></span>
+                </div>
+                <p class="diving-content"></p>
+            </div>
+            <div class="diving-image-container">
+                <img class="diving-image" alt="潛水點照片">
+                <button class="like-button" data-card-id="2">
+                    <svg class="heart-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+        <!-- 錯誤訊息容器 (預設隱藏) -->
+        <div class="error-message" style="display: none;">
+            <!-- 動態載入錯誤訊息 -->
+        </div>
+
+        <!-- 載入中指示器 (預設隱藏) -->
+        <div class="loading-indicator" style="display: none;">
+            載入中...
+        </div>
+    </div>
+
+        <section class="cta-section">
+            <h2 class="cta-title">Ready for start your journey?</h2>
+            <div class="cta-buttons">
+                <a href="/dive-guide" class="cta-button">Find a dive guide</a>
+                <a href="/scuba-discovery" class="cta-button">Discover Scuba Diving</a>
+            </div>
+        </section>
+    </main>
+
+	<!-- 然後添加另一個 script 標籤來處理導航初始化 -->
+	<script type="module">
+    	import { initNavigation } from './js/components/navigation4.js';
+    
+    	// 確保頁面載入時執行檢查
+    	document.addEventListener('DOMContentLoaded', async () => {
+        	console.log('頁面載入，開始初始化...');
+        	await initNavigation();
+    	});
+	</script>
+	
+	<script src="./js/components/diving-card.js"></script>
+	<script>
+        // 當頁面載入完成後初始化卡片
+        document.addEventListener('DOMContentLoaded', () => {
+            // 這裡的 cardId 可以從 URL 參數或其他來源獲取
+            const cardId = 1; // 示例 cardId
+            // 初始化第一張卡片
+            initializeDivingCard(1);
+            // 初始化第二張卡片
+            initializeDivingCard(2);
+        });
+    </script>
+    
+</body>
+</html>

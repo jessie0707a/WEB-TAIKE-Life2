@@ -1,0 +1,212 @@
+/* 基礎重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* 容器樣式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header 樣式 */
+.header {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo-chinese {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.logo-english {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* 登入表單容器 */
+.login-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 登入表單 */
+.login-form {
+    width: 100%;
+}
+
+.login-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* 表單群組 */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+/* 錯誤訊息 */
+.error-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: none;
+    text-align: center;
+}
+
+/* 提交按鈕 */
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0052a3;
+}
+
+/* 表單頁尾 */
+.form-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.form-footer a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.form-footer a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+/* 懸浮效果 */
+.login-form-container:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+/* 響應式設計 */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .login-form-container {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .logo-chinese {
+        font-size: 1.8rem;
+    }
+
+    .logo-english {
+        font-size: 0.9rem;
+    }
+}
+
+/* 輸入框焦點效果 */
+input:focus {
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+}
+
+/* 按鈕禁用狀態 */
+.submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* 載入中動畫 */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 密碼顯示切換按鈕 */
+.password-toggle {
+    position: relative;
+}
+
+.password-toggle i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
+/* 成功訊息樣式 */
+.success-message {
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: none;
+}

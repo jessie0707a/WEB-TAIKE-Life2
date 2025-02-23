@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的收藏 - TAIKE Life</title>
+    <link rel="stylesheet" href="./css/diving-card.css">
+    <link rel="stylesheet" href="./css/collection.css">
+    <link rel="stylesheet" href="./css/nav.css">
+</head>
+<body>
+    <!-- 導航欄容器 -->
+    <div id="navigation-container"></div>
+
+    <main class="collection-container">
+        <h1 class="collection-title">My Collection</h1>
+        
+        <!-- 收藏的潛水點卡片容器 -->
+        <div class="cards-container" id="collectionCards">
+            <!-- 卡片將由JavaScript動態插入 -->
+        </div>
+
+        <!-- 載入中提示 -->
+        <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+            載入中...
+        </div>
+
+        <!-- 錯誤訊息 -->
+        <div id="errorMessage" class="error-message" style="display: none;">
+        </div>
+
+        <!-- 無收藏時的提示 -->
+        <div id="emptyMessage" class="empty-message" style="display: none;">
+            目前還沒有收藏的潛水點喔！
+        </div>
+    </main>
+
+    <script type="module">
+        import { initNavigation } from './js/components/navigation4.js';
+        
+        // 確保頁面載入時執行檢查
+        document.addEventListener('DOMContentLoaded', async () => {
+            console.log('頁面載入，開始初始化...');
+            await initNavigation();
+        });
+    </script>
+    <script src="./js/collection.js"></script>
+</body>
+</html>

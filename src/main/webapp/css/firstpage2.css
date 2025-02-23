@@ -1,0 +1,83 @@
+
+
+/* Hero 區域樣式 */
+
+/* 計算導航欄的總高度 */
+:root {
+    --nav-height: 200px; /* 調整為實際導航欄高度 */
+}
+
+.hero-section {
+    margin-top: var(--nav-height); /* 使用變數設置上邊距 */
+    width: 100%;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.hero-item {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+}
+
+.hero-item:hover .hero-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+
+/* 新增的介紹區域樣式 */
+.intro-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #666;
+}
+

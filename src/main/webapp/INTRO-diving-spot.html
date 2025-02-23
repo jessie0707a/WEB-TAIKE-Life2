@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaoliuqiu Diving Spot - TAIKE Life</title>
+    <link rel="stylesheet" href="./css/blog-style2.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- 網站 Logo -->
+        <header class="header">
+            <div class="logo">
+                <h1 class="logo-chinese">TAIKE Life</h1>
+                <div class="logo-english">Explorer Your Water Activities in Taiwan.</div>
+            </div>
+        </header>
+
+        <!-- 導航欄 -->
+        <div id="navigation-container"></div>
+
+        <main class="main-content">
+            <article class="blog-post">
+                <!-- 圖片和Like按鈕區 -->
+                <div class="image-container">
+                    <img src="images/xiaoliuqiu.jpg" alt="Xiaoliuqiu Diving Spot" class="hero-image">
+                    <button id="likeButton" class="like-box" data-spot-id="1">
+                        <span>LIKE</span>
+                        <i class="fa-heart fa-regular"></i>
+                    </button>
+                </div>
+
+                <!-- 文章內容 -->
+                <div class="post-content">
+                    <h1>Xiaoliuqiu: Taiwan's Hidden Diving Paradise</h1>
+                    
+                    <div class="content-body">
+                        <p class="lead">
+                            Discover the enchanting underwater world of Xiaoliuqiu, where crystal-clear 
+                            waters meet vibrant coral reefs and gentle sea turtles glide through the blue.
+                        </p>
+                        <h2>Best Time to Visit</h2>
+                        <p>The optimal diving season runs from May to October, with water temperatures 
+                           ranging between 22-29°C and visibility often reaching 15-20 meters.</p>
+                        <h2>Popular Dive Sites</h2>
+                        <ul>
+                            <li>Vase Rock - Famous for sea turtle encounters</li>
+                            <li>Beauty Cave - Spectacular underwater formations</li>
+                            <li>Secret Garden - Rich coral ecosystem</li>
+                        </ul>
+                    </div>
+
+                    <!-- Google Maps 區域 -->
+                    <div class="map-section">
+                        <h2><i class="fas fa-map-marker-alt"></i> Location</h2>
+                        <div id="map" class="google-map"></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 相關文章 -->
+            <section class="related-posts">
+                <h2>More Diving Spots</h2>
+                <div class="posts-grid">
+                    <!-- 相關文章會由JavaScript動態載入 -->
+                </div>
+            </section>
+        </main>
+
+        <!-- 登入提醒對話框 -->
+        <div id="loginPrompt" class="modal">
+            <div class="modal-content">
+                <h3>請登入會員</h3>
+                <p>請登入您的帳號，進一步使用LIKE收藏功能!</p>
+                <div class="modal-buttons">
+                    <button onclick="closeLoginPrompt()">取消</button>
+                    <button onclick="redirectToLogin()">前往登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { createNavigation } from './js/components/navigation.js';
+        import { initBlog } from './js/blog-module.js';
+        
+        // 當 DOM 載入完成後執行
+        document.addEventListener('DOMContentLoaded', () => {
+            // 插入導航欄
+            document.getElementById('navigation-container').innerHTML = createNavigation();
+            // 初始化部落格功能
+            initBlog();
+        });
+    </script>
+</body>
+</html>

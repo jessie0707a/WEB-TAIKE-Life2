@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAIKE Life</title>
+    <link rel="stylesheet" href="./css/firstpage2.css">
+    <link rel="stylesheet" href="./css/nav.css">    
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+		<!-- 導航欄容器 -->
+		    <div id="navigation-container"></div>
+
+
+        <!-- 主要內容區 -->  
+        <main class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-item">
+                    <img src="images/welcomepage/scuba-diving.jpg" alt="SCUBA DIVING" class="hero-image">
+                    <div class="hero-overlay"></div>
+                    <h2 class="hero-title">SCUBA DIVING</h2>
+                </div>
+                <div class="hero-item">
+                    <img src="images/welcomepage/sup.jpg" alt="SUP" class="hero-image">
+                    <div class="hero-overlay"></div>
+                    <h2 class="hero-title">SUP</h2>
+                </div>
+                <div class="hero-item">
+                    <img src="images/welcomepage/surfing.jpg" alt="SURFING" class="hero-image">
+                    <div class="hero-overlay"></div>
+                    <h2 class="hero-title">SURFING</h2>
+                </div>
+            </div>
+        </main>
+
+    <!-- 文字介紹區 -->
+    <div class="intro-section">
+        <h2 class="intro-title">
+            Enjoy water activities here<br>
+            and discover the beauty of Taiwan!
+        </h2>
+        <div class="intro-text">
+            <p>Surrounded by the sea, Taiwan has diverse coastlines and offshore islands waiting for you to explore.</p>
+            <p>We hope everyone can find travel and lifestyle experiences they love here, joyfully embracing the ocean.</p>
+            <p>Tai-Ke 台客 refers to both visitors of Taiwan and local Taiwanese.</p>
+        </div>
+    </div>
+
+	<script type="module">
+        import { initNavigation } from './js/components/navigation4.js';
+        
+        // 確保頁面載入時執行檢查
+        document.addEventListener('DOMContentLoaded', async () => {
+            console.log('頁面載入，開始初始化...');
+            await initNavigation();
+        });
+    </script> 
+</body>
+</html>

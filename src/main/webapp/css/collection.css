@@ -1,0 +1,80 @@
+/* 主容器樣式 */
+.collection-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: var(--nav-height);
+}
+
+/* 標題樣式 */
+.collection-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.collection-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    background: #333;
+}
+
+/* 卡片容器樣式 */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* 載入指示器樣式 */
+.loading-indicator {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+/* 錯誤訊息樣式 */
+.error-message {
+    text-align: center;
+    padding: 1rem;
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+/* 空收藏訊息樣式 */
+.empty-message {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-size: 1.2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .collection-container {
+        padding: 1rem;
+    }
+    
+    .collection-title {
+        font-size: 1.5rem;
+    }
+    
+    .collection-title:after {
+        width: 150px;
+    }
+}
